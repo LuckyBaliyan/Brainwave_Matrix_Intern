@@ -5,9 +5,249 @@ A fully functional MERN stack e-commerce platform with a modern user interface, 
 
 ## 🚀 Features  
 
-### Example Request (Create Product)
+### **User Side**  
+- 🏠 **Browse Products** – Modern, responsive, and user-friendly interface  
+- 🛒 **Cart Management** – Add, update, and remove items from the cart  
+- 💳 **Multiple Payment Options** – Secure online payments (Stripe) & Cash on Delivery (COD)  
+- 📱 **Responsive Design** – Optimized for mobile, tablet, and desktop  
+- 🎯 **Smooth Animations** – Enhanced scrolling experience using **Lenis**  
 
-`http
+### **Admin Side**  
+- 📦 **Product Management** – Add, edit, and delete products easily  
+- 📊 **Order Management** – View, process, and update order statuses  
+- 🔑 **Secure Authentication** – Admin-only access to the dashboard  
+
+## Tech Stack
+
+### **Frontend**  
+- **React.js** – Component-based UI development  
+- **Tailwind CSS** – Utility-first CSS framework for styling  
+- **Axios** – For API calls and data fetching  
+- **Lenis** – Smooth scrolling animations  
+
+### **Backend**  
+- **Node.js** – JavaScript runtime environment  
+- **Express.js** – Web application framework for Node.js  
+- **MongoDB** – NoSQL database for storing application data  
+- **Mongoose** – ODM for MongoDB  
+- **Stripe API** – Secure payment gateway integration  
+- **Multer** – Middleware for handling file uploads
+
+
+## 📂 Project Structure  
+
+mern-ecommerce/  
+│
+├── 📁 admin/   
+│ ├── 📁 public/   
+│ ├── 📁 src/   
+│ │ ├── 📁 assets/   
+│ │ ├── 📁 components/   
+│ │ ├── 📁 pages/   
+│ │ ├── 📄 App.jsx  
+│ │ ├── 📄 index.js   
+│ │ └── 📄 index.css   
+│ ├── 📄 package.json  
+│ ├── 📄 tailwind.config.js  
+│ ├── 📄 postcss.config.js  
+│ └── 📄 vite.config.js   
+│
+├── 📁 backend/  
+│ ├── 📁 config/  
+│ ├── 📁 controllers/   
+│ ├── 📁 middlewares/   
+│ ├── 📁 models/   
+│ ├── 📁 routes/  
+│ ├── 📁 utils/   
+│ ├── 📄 server.js   
+│ ├── 📄 .env   
+│ └── 📄 package.json   
+│
+├── 📁 frontend/   
+│ ├── 📁 public/  
+│ ├── 📁 src/  
+│ │ ├── 📁 assets/  
+│ │ ├── 📁 components/   
+│ │ ├── 📁 pages/   
+│ │ ├── 📁 context/   
+│ │ ├── 📄 App.jsx   
+│ │ ├── 📄 index.js   
+│ │ └── 📄 index.css   
+│ ├── 📄 package.json   
+│ ├── 📄 tailwind.config.js    
+│ ├── 📄 postcss.config.js   
+│ └── 📄 vite.config.js   
+│
+├── 📄 .gitignore  
+├── 📄 package.json  
+├── 📄 README.md  
+└── 📄 LICENSE 
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    ## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/LuckyBaliyan/mern-ecommerce.git
+cd mern-ecommerce
+
+2️⃣ Install Dependencies
+Backend
+
+bash
+Copy
+Edit
+cd backend
+npm install
+Frontend
+
+bash
+Copy
+Edit
+cd ../frontend
+npm install
+Admin Panel
+
+bash
+Copy
+Edit
+cd ../admin
+npm install
+
+3️⃣ Set Up Environment Variables
+Create a .env file inside the backend folder and add the following:
+
+env
+Copy
+Edit
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
+CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+
+4️⃣ Run the Development Servers
+Backend
+
+bash
+cd backend
+npm run dev
+Frontend
+
+bash
+cd ../frontend
+npm run dev
+Admin Panel
+
+bash
+Copy
+Edit
+cd ../admin
+npm run dev
+
+5️⃣ Open in Browser
+
+Frontend (User Site): http://localhost:5173
+Admin Panel: http://localhost:5174
+Backend API: http://localhost:5000
+
+
+## API Reference
+
+#### Get all items
+
+```http
+  GET /api/items
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+
+#### Get item
+
+```http
+  GET /api/items/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+#### add(num1, num2)
+
+Takes two numbers and returns the sum.
+
+
+## 📡 API Documentation
+
+The backend provides RESTful APIs for managing products, users, orders, and payments.
+
+### 🔹 Base URL 
+http://localhost:5000/api
+
+
+---
+
+### 🛍 Product Routes
+| Method | Endpoint            | Description                  | Auth Required |
+|--------|--------------------|------------------------------|--------------|
+| GET    | `/products`        | Get all products             | ❌ No         |
+| GET    | `/products/:id`    | Get single product by ID     | ❌ No         |
+| POST   | `/products`        | Create a new product         | ✅ Admin      |
+| PUT    | `/products/:id`    | Update a product by ID       | ✅ Admin      |
+| DELETE | `/products/:id`    | Delete a product by ID       | ✅ Admin      |
+
+---
+
+### 👤 User Routes
+| Method | Endpoint           | Description                  | Auth Required |
+|--------|-------------------|------------------------------|--------------|
+| POST   | `/users/register` | Register a new user          | ❌ No         |
+| POST   | `/users/login`    | Login user                   | ❌ No         |
+| GET    | `/users/profile`  | Get logged-in user profile   | ✅ Yes        |
+| PUT    | `/users/profile`  | Update user profile          | ✅ Yes        |
+
+---
+
+### 📦 Order Routes
+| Method | Endpoint           | Description                  | Auth Required |
+|--------|-------------------|------------------------------|--------------|
+| POST   | `/orders`         | Create a new order           | ✅ Yes        |
+| GET    | `/orders/:id`     | Get order by ID              | ✅ Yes        |
+| GET    | `/orders`         | Get all orders (Admin)       | ✅ Admin      |
+| PUT    | `/orders/:id/pay` | Mark order as paid           | ✅ Yes        |
+| PUT    | `/orders/:id/deliver` | Mark order as delivered  | ✅ Admin      |
+
+---
+
+### 💳 Payment Routes
+| Method | Endpoint           | Description                  | Auth Required |
+|--------|-------------------|------------------------------|--------------|
+| POST   | `/payments/stripe`| Process Stripe payment       | ✅ Yes        |
+
+---
+
+### 🔐 Authentication
+- Protected routes require a **Bearer Token** in the `Authorization` header:
+
+
+---
+
+### 📌 Example Request (Create Product)
+```bash
 POST /api/products
 Content-Type: application/json
 Authorization: Bearer <admin_jwt_token>
@@ -32,14 +272,11 @@ Response:
     "description": "A great product",
     "category": "Electronics",
     "countInStock": 10,
-    "image": "https://example.com/image.jpg"
-  }
+    "image": "https://example.com/image.jpg"}
 }
-`
 
----
-
-## Contributing
+```
+# Contributing
 
 We welcome contributions to improve this project! Follow these steps:
 
@@ -100,7 +337,6 @@ Feel free to reach out if you have questions, suggestions, or just want to conne
 - **GitHub:** [LuckyBaliyan](https://github.com/LuckyBaliyan)  
 - **LinkedIn:** [Lucky Baliyan](https://www.linkedin.com/in/lucky-baliyan-67b487299/)  
 - **Email:** [baliyanlucky85@gmail.com](mailto:baliyanlucky85@gmail.com)  
-
 
 
 
