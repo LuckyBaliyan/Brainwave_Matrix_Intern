@@ -278,53 +278,36 @@ Response:
 
 ## Contributing
 
-Contributions are always welcome!
+We welcome contributions to improve this project! Follow these steps:
 
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-
-## 🤝 Contributing
-
-We welcome contributions to improve this project!  
-Follow these steps to contribute:
-
-### 1️⃣ Fork the Repository
-Click the **Fork** button at the top right of this repository page to create your own copy.
-
-### 2️⃣ Clone Your Fork
-```bash
+1. Fork the repository.
+2. Clone your fork.
+`ash
 git clone https://github.com/<your-username>/mern-ecommerce.git
 cd mern-ecommerce
-
-3️⃣ Create a New Branch
+`
+3. Create a new branch.
+`ash
 git checkout -b feature/your-feature-name
-
-
-4️⃣ Make Your Changes
-Follow the project’s code style and folder structure.
-Write clear and concise commit messages.
-
-5️⃣ Commit Your Changes
+`
+4. Make your changes.
+5. Commit your changes.
+`ash
 git add .
 git commit -m "Add: your descriptive commit message"
-
-6️⃣ Push to Your Branch
+`
+6. Push to your branch.
+`ash
 git push origin feature/your-feature-name
+`
+7. Open a pull request from your fork and describe your changes clearly.
 
-7️⃣ Open a Pull Request
-Go to your fork on GitHub.
+**Contribution Guidelines**
 
-Click "Compare & pull request".
-Provide a detailed description of your changes.
-
-📌 Contribution Guidelines
-
-Keep code clean and readable.
-Ensure no sensitive information (like .env values) is pushed.
-Test your code before submitting a PR.
-Respect the existing design patterns.
+- Keep code clean and readable.
+- Do not commit sensitive information (like .env values).
+- Test your code before submitting a PR.
+- Respect existing design patterns.
 
 ## License
 
@@ -354,6 +337,7 @@ Feel free to reach out if you have questions, suggestions, or just want to conne
 - **GitHub:** [LuckyBaliyan](https://github.com/LuckyBaliyan)  
 - **LinkedIn:** [Lucky Baliyan](https://www.linkedin.com/in/lucky-baliyan-67b487299/)  
 - **Email:** [baliyanlucky85@gmail.com](mailto:baliyanlucky85@gmail.com)  
+
 
 
 
