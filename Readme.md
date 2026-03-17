@@ -281,25 +281,28 @@ Response:
 We welcome contributions to improve this project! Follow these steps:
 
 1. Fork the repository.
+
 2. Clone your fork.
-`ash
+``` bash
 git clone https://github.com/<your-username>/mern-ecommerce.git
 cd mern-ecommerce
-`
+```
 3. Create a new branch.
-`ash
+```bash
 git checkout -b feature/your-feature-name
-`
+```
 4. Make your changes.
+
 5. Commit your changes.
-`ash
+```bash
 git add .
 git commit -m "Add: your descriptive commit message"
-`
+```
 6. Push to your branch.
-`ash
+```bash
 git push origin feature/your-feature-name
-`
+```
+
 7. Open a pull request from your fork and describe your changes clearly.
 
 **Contribution Guidelines**
