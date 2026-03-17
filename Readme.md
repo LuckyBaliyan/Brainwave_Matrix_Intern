@@ -34,6 +34,19 @@ A fully functional MERN stack e-commerce platform with a modern user interface, 
 - **Multer** – Middleware for handling file uploads
 
 
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="screenShots/4.png" alt="Screenshot 4" /></td>
+    <td><img src="screenShots/3.png" alt="Screenshot 3" /></td>
+  </tr>
+  <tr>
+    <td><img src="screenShots/2.png" alt="Screenshot 2" /></td>
+    <td><img src="screenShots/1.png" alt="Screenshot 1" /></td>
+  </tr>
+</table>
+
 ## 📂 Project Structure  
 
 mern-ecommerce/  
@@ -340,6 +353,7 @@ Feel free to reach out if you have questions, suggestions, or just want to conne
 - **GitHub:** [LuckyBaliyan](https://github.com/LuckyBaliyan)  
 - **LinkedIn:** [Lucky Baliyan](https://www.linkedin.com/in/lucky-baliyan-67b487299/)  
 - **Email:** [baliyanlucky85@gmail.com](mailto:baliyanlucky85@gmail.com)  
+
 
 
 
